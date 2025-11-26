@@ -241,6 +241,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 # Acknowledgments
 
 · Brainfuck language designed by Urban Müller
+
+
 · Inspired by various Brainfuck implementations in different languages
 
 ---
