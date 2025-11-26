@@ -1,26 +1,26 @@
-# BrainPy
+# bf2py
 
 [![PyPI version](https://img.shields.io/pypi/v/brainpy.svg)](https://pypi.org/project/brainpy/)
 
-BrainPy is a powerful Python library that converts Brainfuck code to Python and executes it seamlessly.
+bf2py is a powerful Python library that converts Brainfuck code to Python and executes it seamlessly.
 
 ## Installation
 
 ```bash
-pip install brainpy
+pip install bf2py
 ```
 
 # Quick Start
 
 ```python
-import brainpy
+import bf2py
 
 # Execute Brainfuck code directly
-result = brainpy.execute("++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.")
+result = bf2py.execute("++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.")
 print(result)  # Output: "Hello World!\n"
 
 # Convert Brainfuck to Python code
-python_code = brainpy.compile_to_python("+++>++<[->+<]>.")
+python_code = bf2py.compile_to_python("+++>++<[->+<]>.")
 print(python_code)
 ```
 
@@ -28,13 +28,13 @@ Command Line Usage
 
 ```bash
 # Execute a Brainfuck file
-brainpy hello_world.bf
+bf2py hello_world.bf
 
 # Execute Brainfuck code from string  
-brainpy -c "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
+bf2py -c "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
 
 # Compile to Python without executing
-brainpy --compile-only program.bf
+bf2py --compile-only program.bf
 ```
 
 # License
