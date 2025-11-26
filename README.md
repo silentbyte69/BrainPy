@@ -37,6 +37,6 @@ brainpy -c "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..++
 brainpy --compile-only program.bf
 ```
 
-# Quick
+# License
 
 MIT License
