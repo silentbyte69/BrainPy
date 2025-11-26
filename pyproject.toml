@@ -1,0 +1,93 @@
+[build-system]
+requires = [
+    "setuptools>=45",
+    "wheel",
+    "setuptools-scm"
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brainpy"
+dynamic = ["version"]
+description = "A library that converts Brainfuck code to Python and executes it"
+readme = {file = "README.md", content-type = "text/markdown"}
+authors = [
+    { name = "silentbyte69", email = "dmitrypidaras89@gmail.com" },
+]
+maintainers = [
+    { name = "Dmitry Seksov", email = "dmitrypidaras89@gmail.com" },
+]
+keywords = [
+    "brainfuck",
+    "interpreter", 
+    "compiler",
+    "esolang",
+    "programming-language",
+    "code-conversion"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Interpreters",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Education",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "pytest-cov>=3.0",
+    "black>=22.0",
+    "flake8>=5.0",
+    "mypy>=1.0",
+    "twine>=4.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/silentbyte69/brainpy"
+Documentation = "https://github.com/silentbyte69/brainpy#readme"
+Repository = "https://github.com/silentbyte69/brainpy"
+"Bug Tracker" = "https://github.com/silentbyte69/brainpy/issues"
+"Changelog" = "https://github.com/silentbyte69/brainpy/releases"
+
+[project.scripts]
+brainpy = "brainpy.cli:main"
+
+[tool.setuptools_scm]
+write_to = "brainpy/_version.py"
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
+exclude = [".git", "__pycache__", "build", "dist", "*.egg-info"]
+
+[tool.mypy]
+python_version = "3.7"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--verbose --color=yes --cov=brainpy --cov-report=term-missing --cov-report=xml"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
