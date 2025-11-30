@@ -1,6 +1,6 @@
 # bf2py
 
-[![PyPI version](https://img.shields.io/pypi/v/brainpy.svg)](https://pypi.org/project/brainpy/)
+[![PyPI version](https://img.shields.io/pypi/v/bf2py.svg)](https://pypi.org/project/bf2py/)
 
 bf2py is a powerful Python library that converts Brainfuck code to Python and executes it seamlessly.
 
